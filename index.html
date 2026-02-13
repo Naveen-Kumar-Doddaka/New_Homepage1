@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artify - Custom Digital Art</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav h2{
+    color:#4f46e5;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#4f46e5;
+}
+
+/* HERO */
+.hero{
+    padding:100px 8%;
+    text-align:center;
+    background:linear-gradient(to right,#4f46e5,#7c3aed);
+    color:white;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:30px;
+    opacity:0.9;
+}
+
+.hero button{
+    padding:12px 28px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#facc15;
+}
+
+.btn-secondary{
+    background:white;
+    color:#4f46e5;
+}
+
+/* SECTION */
+.section{
+    padding:80px 8%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:28px;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.gallery div{
+    height:200px;
+    background:#e2e8f0;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.gallery div:hover{
+    transform:scale(1.05);
+}
+
+/* PRICING */
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.card button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#4f46e5;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* STEPS */
+.steps{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.step{
+    text-align:center;
+}
+
+.step span{
+    font-size:40px;
+}
+
+.step p{
+    margin-top:10px;
+    font-weight:500;
+}
+
+/* TOP ARTISTS */
+.artists{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.artist-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.07);
+}
+
+.artist-img{
+    height:150px;
+    background:#cbd5e1;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.artist-card button{
+    margin-top:10px;
+    padding:8px 16px;
+    border:none;
+    background:#7c3aed;
+    color:white;
+    border-radius:20px;
+}
+
+/* REVIEWS */
+.reviews{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.review{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    background:#4f46e5;
+    color:white;
+    padding:80px 20px;
+}
+
+.cta button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:#facc15;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Artify</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Order</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Custom Digital Art Commissions</h1>
+    <p>Bring your imagination to life with professional artists.</p>
+    <button class="btn-secondary">View Portfolio</button>
+    <button class="btn-primary">Order Now</button>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="section">
+    <h2>Pricing</h2>
+    <div class="pricing">
+        <div class="card">
+            <h3>Basic</h3>
+            <p>Simple Portrait</p>
+            <button>Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Standard</h3>
+            <p>Detailed Artwork</p>
+            <button>Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <p>Full Background + HD</p>
+            <button>Order</button>
+        </div>
+    </div>
+
+    <!-- Steps (No "How it works" heading) -->
+    <div class="steps">
+        <div class="step">
+            <span>📝</span>
+            <p>Submit Request</p>
+        </div>
+        <div class="step">
+            <span>💳</span>
+            <p>Make Payment</p>
+        </div>
+        <div class="step">
+            <span>🎨</span>
+            <p>Receive Artwork</p>
+        </div>
+    </div>
+</section>
+
+<!-- TOP ARTISTS -->
+<section class="section">
+    <h2>Top Artists</h2>
+    <div class="artists">
+        <div class="artist-card">
+            <div class="artist-img"></div>
+            <h4>Artist Name</h4>
+            ⭐⭐⭐⭐⭐
+            <br>
+            <button>View Profile</button>
+        </div>
+
+        <div class="artist-card">
+            <div class="artist-img"></div>
+            <h4>Artist Name</h4>
+            ⭐⭐⭐⭐⭐
+            <br>
+            <button>View Profile</button>
+        </div>
+
+        <div class="artist-card">
+            <div class="artist-img"></div>
+            <h4>Artist Name</h4>
+            ⭐⭐⭐⭐⭐
+            <br>
+            <button>View Profile</button>
+        </div>
+
+        <div class="artist-card">
+            <div class="artist-img"></div>
+            <h4>Artist Name</h4>
+            ⭐⭐⭐⭐⭐
+            <br>
+            <button>View Profile</button>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+        <div class="review">⭐⭐⭐⭐⭐ Amazing work!</div>
+        <div class="review">⭐⭐⭐⭐⭐ Highly recommended!</div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Get Started Today!</h2>
+    <p>Join now and request your custom artwork.</p>
+    <button>Sign Up Now</button>
+</section>
+
+<footer>
+    Contact | Terms
+</footer>
+
+</body>
+</html>
