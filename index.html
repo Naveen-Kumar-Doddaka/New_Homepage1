@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Digital Art Commissions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#000;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    border-bottom:2px solid #000;
+}
+
+header h2{
+    font-weight:bold;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+    margin-left:25px;
+    font-weight:600;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    border-bottom:2px solid #000;
+}
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:12px 25px;
+    margin:10px;
+    border:2px solid #000;
+    background:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* Section Titles */
+.section-title{
+    text-align:center;
+    font-size:24px;
+    margin:60px 0 30px;
+    position:relative;
+}
+
+.section-title:before,
+.section-title:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:35%;
+    height:2px;
+    background:#000;
+}
+
+.section-title:before{
+    left:0;
+}
+
+.section-title:after{
+    right:0;
+}
+
+/* Gallery */
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding-bottom:40px;
+}
+
+.art-box{
+    width:200px;
+    height:130px;
+    border:2px solid #000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* Pricing */
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding-bottom:40px;
+}
+
+.price-card{
+    border:2px solid #000;
+    padding:25px;
+    width:220px;
+    text-align:center;
+}
+
+.price-card h3{
+    margin-bottom:15px;
+}
+
+.price-card button{
+    margin-top:15px;
+    padding:8px 20px;
+    border:2px solid #000;
+    background:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.price-card button:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* How It Works */
+.how{
+    text-align:center;
+    padding:50px 20px;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+}
+
+.how p{
+    margin-top:15px;
+    font-size:16px;
+    line-height:30px;
+}
+
+/* Top Artists */
+.artists{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding-bottom:50px;
+}
+
+.artist-card{
+    width:220px;
+    border:2px solid #000;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.artist-card:hover{
+    transform:translateY(-5px);
+}
+
+.artist-img{
+    height:130px;
+    border:2px solid #000;
+    margin-bottom:15px;
+}
+
+.artist-card button{
+    margin-top:10px;
+    padding:6px 15px;
+    border:2px solid #000;
+    background:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.artist-card button:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* Reviews */
+.reviews{
+    padding:50px 20px;
+    background:#f5f5f5;
+}
+
+.review-box{
+    border:2px solid #000;
+    padding:20px;
+    max-width:600px;
+    margin:15px auto;
+    background:#fff;
+}
+
+/* Get Started */
+.get-started{
+    text-align:center;
+    padding:60px 20px;
+    border-top:2px solid #000;
+}
+
+.get-started button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:2px solid #000;
+    background:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.get-started button:hover{
+    background:#000;
+    color:#fff;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:2px solid #000;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>LOGO</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Order</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Custom Digital Art Commissions</h1>
+    <button>View Portfolio</button>
+    <button>Order Now</button>
+</section>
+
+<h2 class="section-title">Gallery</h2>
+<div class="gallery">
+    <div class="art-box">Art 1</div>
+    <div class="art-box">Art 2</div>
+    <div class="art-box">Art 3</div>
+    <div class="art-box">Art 4</div>
+</div>
+
+<h2 class="section-title">Pricing</h2>
+<div class="pricing">
+    <div class="price-card">
+        <h3>Basic</h3>
+        <button>Order</button>
+    </div>
+    <div class="price-card">
+        <h3>Standard</h3>
+        <button>Order</button>
+    </div>
+    <div class="price-card">
+        <h3>Premium</h3>
+        <button>Order</button>
+    </div>
+</div>
+
+<section class="how">
+    <h2>How It Works</h2>
+    <p>
+        1. Submit Request <br>
+        2. Make Payment <br>
+        3. Receive Artwork
+    </p>
+</section>
+
+<h2 class="section-title">Top Artists</h2>
+<div class="artists">
+    <div class="artist-card">
+        <div class="artist-img"></div>
+        <h4>Artist Name</h4>
+        ★★★★★
+        <button>View Profile</button>
+    </div>
+
+    <div class="artist-card">
+        <div class="artist-img"></div>
+        <h4>Artist Name</h4>
+        ★★★★★
+        <button>View Profile</button>
+    </div>
+
+    <div class="artist-card">
+        <div class="artist-img"></div>
+        <h4>Artist Name</h4>
+        ★★★★★
+        <button>View Profile</button>
+    </div>
+</div>
+
+<section class="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="review-box">
+        ★★★★★ <br><br>
+        "Amazing work!"
+    </div>
+    <div class="review-box">
+        ★★★★★ <br><br>
+        "Highly recommended!"
+    </div>
+</section>
+
+<section class="get-started">
+    <h2>Get Started Today!</h2>
+    <p>Join now and request your custom artwork.</p>
+    <button>Sign Up Now</button>
+</section>
+
+<footer>
+    Contact | Terms
+</footer>
+
+</body>
+</html>
